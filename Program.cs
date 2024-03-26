@@ -9,12 +9,14 @@ namespace AutenticacaoManfred
             if (args.Length == 0)
             {
                 Console.WriteLine("Nenhum parâmetro informado como senha");
+                Thread.Sleep(3000);
                 return;
             }
 
             if (args.Length > 1)
             {
                 Console.WriteLine("Mais de parâmetro informado como senha");
+                Thread.Sleep(3000);
                 return;
             }
 
@@ -32,10 +34,12 @@ namespace AutenticacaoManfred
                 {
                     Console.WriteLine($"Você acertou a senha, arquivo com a senha criado na área de trabalho, {validatorManager.GetDesktopFilePath()}");
                     validatorManager.CriaArquivoComSenha();
+                    Thread.Sleep(1000);
                     return;
                 }
 
                 Console.WriteLine($"Senha '{senha}' é incorreta");
+                Thread.Sleep(1000);
                 return;
             }
 
@@ -44,19 +48,20 @@ namespace AutenticacaoManfred
             if (!validaCooldown)
             {
                 Console.WriteLine($"Espere o cooldown de 1 minuto...");
+                Thread.Sleep(3000);
                 return;
             }
 
             if (senhaValida)
             {
                 Console.WriteLine($"Você acertou a senha, arquivo com a senha criado na área de trabalho, {validatorManager.GetDesktopFilePath()}");
+                Thread.Sleep(3000);
                 validatorManager.CriaArquivoComSenha();
                 return;
             }
-            else
-            {
-                Console.WriteLine($"Senha '{senha}' é incorreta");
-            }
+
+            Console.WriteLine($"Senha '{senha}' é incorreta");
+            Thread.Sleep(3000);
         }
     }
 }
