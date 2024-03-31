@@ -8,16 +8,12 @@ namespace AutenticacaoManfred
         {
             if (args.Length == 0)
             {
-                Console.WriteLine("Nenhum parâmetro informado como senha");
-                Thread.Sleep(3000);
-                return;
+                throw new Exception("Nenhum parâmetro informado como senha");
             }
 
             if (args.Length > 1)
             {
-                Console.WriteLine("Mais de parâmetro informado como senha");
-                Thread.Sleep(3000);
-                return;
+                throw new Exception("Mais de parâmetro informado como senha");
             }
 
             string senha = args.First();

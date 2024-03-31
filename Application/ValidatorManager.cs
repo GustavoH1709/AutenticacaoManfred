@@ -48,7 +48,7 @@ namespace AutenticacaoManfred.Application
 
             TimeSpan diff = DateTime.Now - data;
 
-            bool cooldownZerado = diff.TotalMinutes >= 1;
+            bool cooldownZerado = diff.TotalSeconds >= 5;
 
             if (cooldownZerado)
             {
