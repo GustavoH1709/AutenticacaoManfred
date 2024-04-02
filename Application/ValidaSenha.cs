@@ -4,7 +4,7 @@
     {
         public bool Validar(string senha)
         {
-            return (senha ?? "").Equals("a1b2c3");
+            return (senha ?? "").Equals("Z9Z9Z9");
         }
     }
 }

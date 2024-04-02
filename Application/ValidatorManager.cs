@@ -73,7 +73,7 @@ namespace AutenticacaoManfred.Application
             using (FileStream fs = File.Create(_desktopFilePath))
             {
                 // Add some text to file
-                byte[] text = new UTF8Encoding(true).GetBytes("a1b2c3");
+                byte[] text = new UTF8Encoding(true).GetBytes("Z9Z9Z9");
                 fs.Write(text, 0, text.Length);
                 fs.Close();
             }
